@@ -3,6 +3,7 @@ node_modules
 .parcel-cache
 dist/*.js
 dist/*.map
+.cache
 
 # Cruft
 .DS_Store
