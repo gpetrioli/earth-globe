@@ -1,17 +1,24 @@
 {
   "name": "vanilla",
   "version": "1.0.0",
-  "description": "JavaScript example starter project",
+  "description": "Three.js earth playground",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "prestart": "npm run clean",
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "prebuild": "npm run clean",
+    "build": "parcel build index.html --public-url /earth-globe/ --no-source-maps",
+    "deploy": "gh-pages -d dist",
+    "deploy:debug": "NODE_DEBUG=gh-pages npm run deploy"
   },
   "dependencies": {
     "three": "0.136.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
+    "gh-pages": "^3.2.3",
     "parcel": "^2.0.0",
+    "parcel-reporter-static-files-copy": "^1.3.4",
     "typescript": "4.4.4"
   },
   "resolutions": {

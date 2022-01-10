@@ -1,8 +1,8 @@
 # Don't check auto-generated stuff into git
-node_modules
+/node_modules
+/dist
 .parcel-cache
-dist/*.js
-dist/*.map
+.cache
 
 # Cruft
 .DS_Store
